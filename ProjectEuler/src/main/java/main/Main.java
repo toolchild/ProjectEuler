@@ -18,5 +18,4 @@ public class Main {
     ProblemBase.print(new Logic1(), 1, 0.0, IConstants.PROBLEM1_LIMIT, IConstants.PROBLEM1_MULTIPLE_OF_X, IConstants.PROBLEM1_MULTIPLE_OF_Y );;
     ProblemBase.print(new Logic2(), 2, IConstants.PROBLEM2_LIMIT );;
   }
-
 }
