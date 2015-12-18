@@ -9,13 +9,9 @@ import problems.LogicBase;
 
 public class Logic1 extends LogicBase {
 
-  public Logic1() {
-  }
-
   @Override
   public double getResult(Number... numbers) {
-
-    ArrayList<Integer> multiples = getNumbers(numbers[0], numbers[1], numbers[2], numbers[3]);
+    ArrayList<Integer> multiples = getNumbers(numbers[0].intValue(), numbers[1].intValue(), numbers[2].intValue(), numbers[3].intValue());
     double result = addNumbers(multiples);
     return result;
   }
@@ -40,10 +36,10 @@ public class Logic1 extends LogicBase {
    * @return
    */
 
-  private ArrayList<Integer> getNumbers(Number start, Number end, Number multipleOfX, Number multipleOfY) {
+  private ArrayList<Integer> getNumbers(int start, int end, int multipleOfX, int multipleOfY) {
     ArrayList<Integer> result = new ArrayList<Integer>();
-    for (int number = start.intValue(); number < end.intValue(); number++) {
-      if (isMultipleOfXAndY(multipleOfX.intValue(), multipleOfY.intValue(), number)) {
+    for (int number = start; number < end; number++) {
+      if (isMultipleOfXAndY(multipleOfX, multipleOfY, number)) {
         result.add(number);
       }
     }
