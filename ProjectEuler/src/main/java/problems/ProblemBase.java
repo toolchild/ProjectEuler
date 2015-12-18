@@ -5,9 +5,11 @@ import java.util.ArrayList;
 import org.apache.log4j.Logger;
 
 import settings.IConstants;
+import sun.rmi.runtime.Log;
 
 public abstract class ProblemBase {
-  private static final Logger log = Logger.getLogger(ProblemBase.class);
+  private static final Logger logConsole = Logger.getLogger("console");
+  private static final Logger mdLogfile = Logger.getLogger("file");
 
   private static ArrayList<Number> getResultAndProcessingTime(LogicBase logic, Number... numbers) {
     ArrayList<Number> results = new ArrayList<Number>();
@@ -25,6 +27,7 @@ public abstract class ProblemBase {
     while(problemResultString.length()<IConstants._PROBLEM_RESULT_STRING_LENGTH){
       problemResultString.append(' ');
     }
-    log.info("Problem " + problemNumber + "\t" + problemResultString.toString() + " \t processing time in nano seconds: "+ results.get(1) );
+    logConsole.info("Problem " + problemNumber + "\t" + problemResultString.toString() + " \t processing time (nano seconds): "+ results.get(1) );
+    mdLogfile.info("|Problem " + problemNumber + "|" + problemResultString.toString()+ "|"+ results.get(1) + "|");
   }
 }
