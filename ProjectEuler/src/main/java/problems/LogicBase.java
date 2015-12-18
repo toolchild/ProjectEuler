@@ -5,6 +5,6 @@ public abstract class LogicBase {
   public LogicBase() {
   }
 
-  public abstract double getResult(Number... numbers);
+  public abstract int getResult(Number... numbers);
 
 }
