@@ -24,9 +24,11 @@ public abstract class ProblemBase {
     ArrayList<Number> results = getResultAndProcessingTime(logic, numbers); 
     StringBuilder problemResultString = new StringBuilder();
     problemResultString = problemResultString.append(results.get(0).toString());
+    
     while(problemResultString.length()<IConstants._PROBLEM_RESULT_STRING_LENGTH){
       problemResultString.append(' ');
     }
+    
     logConsole.info("Problem " + problemNumber + "\t" + problemResultString.toString() + " \t processing time (nano seconds): "+ results.get(1) );
     mdLogfile.info("|Problem " + problemNumber + "|" + problemResultString.toString()+ "|"+ results.get(1) + "|");
   }
