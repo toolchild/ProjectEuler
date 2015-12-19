@@ -5,6 +5,6 @@ public abstract class LogicBase {
   public LogicBase() {
   }
 
-  public abstract int getResult(Number... numbers);
+  public abstract long getResult(Number... numbers);
 
 }

@@ -18,7 +18,7 @@ public class Logic5 extends LogicBase {
   private static final Logger logConsole = Logger.getLogger("console");
 
   @Override
-  public int getResult(Number... numbers) {
+  public long getResult(Number... numbers) {
     int result = getSmallestNumberDivisibleByStartToEnd(numbers[0].intValue(), numbers[1].intValue());
     return result;
   }

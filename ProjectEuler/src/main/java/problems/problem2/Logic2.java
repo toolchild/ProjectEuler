@@ -12,7 +12,7 @@ import problems.LogicBase;
 public class Logic2 extends LogicBase {
 
   @Override
-  public int getResult(Number... numbers) {
+  public long getResult(Number... numbers) {
     return getSumOfFibonaccis(numbers[0].intValue());
   }
 

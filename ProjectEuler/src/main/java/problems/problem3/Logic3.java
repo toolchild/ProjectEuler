@@ -14,7 +14,7 @@ public class Logic3 extends LogicBase {
   private static final Logger logConsole = Logger.getLogger("console");
 
   @Override
-  public int getResult(Number... numbers) {
+  public long getResult(Number... numbers) {
     int result = getLargestPrimefactor(numbers[0].longValue());
     return result;
   }

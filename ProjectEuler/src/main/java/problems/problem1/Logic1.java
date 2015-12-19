@@ -10,7 +10,7 @@ import problems.LogicBase;
 public class Logic1 extends LogicBase {
 
   @Override
-  public int getResult(Number... numbers) {
+  public long getResult(Number... numbers) {
     ArrayList<Integer> multiples = getNumbers(numbers[0].intValue(), numbers[1].intValue(), numbers[2].intValue(), numbers[3].intValue());
     int result = addNumbers(multiples);
     return result;

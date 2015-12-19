@@ -12,7 +12,7 @@ public class Logic7 extends LogicBase {
   private ArrayList<Integer> primes; // list of primes to check with whether the number is a prime
 
   @Override
-  public int getResult(Number... numbers) {
+  public long getResult(Number... numbers) {
     int result = getSpecificPrime(numbers[0].intValue());
     return result;
   }

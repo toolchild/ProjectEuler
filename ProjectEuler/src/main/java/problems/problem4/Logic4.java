@@ -6,7 +6,7 @@ import com.sun.xml.internal.ws.util.StringUtils;
 
 import problems.LogicBase;
 
-//A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+//A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 ï¿½ 99.
 //Find the largest palindrome made from the product of two 3-digit numbers.
 
 public class Logic4 extends LogicBase {
@@ -14,7 +14,7 @@ public class Logic4 extends LogicBase {
   private static final Logger logConsole = Logger.getLogger("console");
 
   @Override
-  public int getResult(Number... numbers) {
+  public long getResult(Number... numbers) {
     int result = findLargestPalindrome(numbers[0].intValue());
     return result;
   }

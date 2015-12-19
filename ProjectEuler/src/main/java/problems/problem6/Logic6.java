@@ -19,7 +19,7 @@ public class Logic6 extends LogicBase {
   private static final Logger logConsole = Logger.getLogger("console");
   
   @Override
-  public int getResult(Number... numbers) {
+  public long getResult(Number... numbers) {
    int limit = numbers[0].intValue();
     int sumSquares = getSumSquares(limit);
     int squareSum = getSquareSum(limit);
