@@ -29,6 +29,6 @@ public abstract class ProblemBase {
     }
     
     logConsole.info("Problem " + problemNumber + "\t" + problemResultString.toString() + " \t processing time (nano seconds): "+ results.get(1) );
-    mdLogfile.info("|Problem " + problemNumber + "|" + problemResultString.toString()+ "|"+ results.get(1) + "|");
+    mdLogfile.info("| " + problemNumber + "|" + problemResultString.toString()+ "|"+ results.get(1) + "|");
   }
 }
