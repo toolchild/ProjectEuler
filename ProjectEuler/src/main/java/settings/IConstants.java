@@ -9,4 +9,6 @@ public interface IConstants {
 	public static final Number PROBLEM1_LIMIT = 1000;
 	
 	public static final Number PROBLEM2_LIMIT = 4000000;
+
+	public static final Number PROBLEM3_NUMBER = 600851475143L;
 }

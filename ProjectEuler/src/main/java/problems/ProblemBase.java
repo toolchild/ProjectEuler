@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import org.apache.log4j.Logger;
 
 import settings.IConstants;
-import sun.rmi.runtime.Log;
 
 public abstract class ProblemBase {
   private static final Logger logConsole = Logger.getLogger("console");
