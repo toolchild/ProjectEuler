@@ -16,4 +16,6 @@ public interface IConstants {
 
   public static final Number PROBLEM5_DIVISOR_START = 1;
   public static final Number PROBLEM5_DIVISOR_END = 20;
+
+  public static final Number PROBLEM6_LIMIT = 100;
 }
