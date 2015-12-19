@@ -1,5 +1,7 @@
 package problems.problem3;
 
+import java.util.ArrayList;
+
 import org.apache.log4j.Logger;
 
 import problems.LogicBase;
@@ -19,16 +21,23 @@ public class Logic3 extends LogicBase {
 
   private int getLargestPrimefactor(long number) {
     int result = 0;
+    ArrayList<Integer> primefactors = getPrimefactors(number);
+    result = primefactors.get(primefactors.size() - 1);
+
+    return result;
+  }
+
+  public ArrayList<Integer> getPrimefactors(long number) {
+    ArrayList<Integer> primefactors = new ArrayList<Integer>();
     for (int i = 2; i <= number; i++) {
       if (number % i == 0) {
         number = number / i;
-        logConsole.debug(i + " : " + number);
-        if (result < i) {
-          result = i;
-        }
+        primefactors.add(i);
+        i = 1; // reset to 1 the next run is done with 2 (after i++)
       }
     }
-    return result;
+
+    return primefactors;
   }
 
 }
