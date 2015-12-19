@@ -3,8 +3,6 @@ package problems.problem5;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import javax.print.attribute.standard.PrinterMessageFromOperator;
-
 import org.apache.log4j.Logger;
 
 import problems.LogicBase;

@@ -1,7 +1,5 @@
 package problems.problem6;
 
-import org.apache.log4j.Logger;
-
 import problems.LogicBase;
 
 
@@ -15,8 +13,6 @@ import problems.LogicBase;
 
 
 public class Logic6 extends LogicBase {
-
-  private static final Logger logConsole = Logger.getLogger("console");
   
   @Override
   public long getResult(Number... numbers) {

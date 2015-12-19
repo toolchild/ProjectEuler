@@ -2,8 +2,6 @@ package problems.problem4;
 
 import org.apache.log4j.Logger;
 
-import com.sun.xml.internal.ws.util.StringUtils;
-
 import problems.LogicBase;
 
 //A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 � 99.
