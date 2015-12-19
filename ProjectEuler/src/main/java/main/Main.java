@@ -6,6 +6,7 @@ import problems.ProblemBase;
 import problems.problem1.Logic1;
 import problems.problem2.Logic2;
 import problems.problem3.Logic3;
+import problems.problem4.Logic4;
 import settings.IConstants;
 
 public class Main {
@@ -17,6 +18,7 @@ public class Main {
     ProblemBase.print(new Logic1(), 1, 0.0, IConstants.PROBLEM1_LIMIT, IConstants.PROBLEM1_MULTIPLE_OF_X, IConstants.PROBLEM1_MULTIPLE_OF_Y );
     ProblemBase.print(new Logic2(), 2, IConstants.PROBLEM2_LIMIT );
     ProblemBase.print(new Logic3(), 3, IConstants.PROBLEM3_NUMBER );
+    ProblemBase.print(new Logic4(), 4, IConstants.PROBLEM4_LIMIT);
   }
 
   private static void printMdLogfileHeader() {
