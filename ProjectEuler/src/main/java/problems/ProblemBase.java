@@ -18,22 +18,22 @@ public abstract class ProblemBase {
     results.add(end - start);
     return results;
   }
-  
-  public static double adjustProcessingTime(long processingTime){
-    Double adjustedProcessingTime = Long.valueOf(processingTime).doubleValue()/1000000000;
+
+  public static double adjustProcessingTime(long processingTime) {
+    Double adjustedProcessingTime = Long.valueOf(processingTime).doubleValue() / 1000000000;
     return adjustedProcessingTime;
   }
-  
-  public static void print(LogicBase logic, int problemNumber, Number... numbers){
-    ArrayList<Long> results = getResultAndProcessingTime(logic, numbers); 
+
+  public static void print(LogicBase logic, int problemNumber, Number... numbers) {
+    ArrayList<Long> results = getResultAndProcessingTime(logic, numbers);
     StringBuilder problemResultString = new StringBuilder();
     problemResultString = problemResultString.append(results.get(0).toString());
-    
-    while(problemResultString.length()<IConstants._PROBLEM_RESULT_STRING_LENGTH){
+
+    while (problemResultString.length() < IConstants._PROBLEM_RESULT_STRING_LENGTH) {
       problemResultString.append(' ');
     }
-    
-    logConsole.info("Problem " + problemNumber + "\t" + problemResultString.toString() + " \t processing time (seconds): "+ String.format("%.12f", adjustProcessingTime(results.get(1))) );
-    mdLogfile.info("| " + problemNumber + "|" + problemResultString.toString()+ "|"+ String.format("%.12f", adjustProcessingTime(results.get(1))) + "|");
+
+    logConsole.info("Problem " + problemNumber + "\t" + problemResultString.toString() + " \t processing time (seconds): " + String.format("%.9f", adjustProcessingTime(results.get(1))));
+    mdLogfile.info("| " + problemNumber + "|" + problemResultString.toString() + "|" + String.format("%.9f", adjustProcessingTime(results.get(1))) + "|");
   }
 }
