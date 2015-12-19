@@ -31,7 +31,7 @@ public class Main {
 
   private static void printMdLogfileHeader() {
     mdLogfile.info("#Project Euler");
-    mdLogfile.info("|Problem | Result | Processing Time (nano seconds)|");
+    mdLogfile.info("|Problem | Result | Processing Time (seconds)|");
     mdLogfile.info("|---:| ---:| ---:|");
   }
 }
