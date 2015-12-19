@@ -18,4 +18,6 @@ public interface IConstants {
   public static final Number PROBLEM5_DIVISOR_END = 20;
 
   public static final Number PROBLEM6_LIMIT = 100;
+
+  public static final Number PROBLEM7_INDEX = 10001;
 }

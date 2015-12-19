@@ -9,6 +9,7 @@ import problems.problem3.Logic3;
 import problems.problem4.Logic4;
 import problems.problem5.Logic5;
 import problems.problem6.Logic6;
+import problems.problem7.Logic7;
 import settings.IConstants;
 
 public class Main {
@@ -23,6 +24,7 @@ public class Main {
     ProblemBase.print(new Logic4(), 4, IConstants.PROBLEM4_LIMIT);
     ProblemBase.print(new Logic5(), 5, IConstants.PROBLEM5_DIVISOR_START, IConstants.PROBLEM5_DIVISOR_END);
     ProblemBase.print(new Logic6(), 6, IConstants.PROBLEM6_LIMIT);
+    ProblemBase.print(new Logic7(), 7, IConstants.PROBLEM7_INDEX);
   }
 
   private static void printMdLogfileHeader() {
