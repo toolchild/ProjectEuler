@@ -4,16 +4,16 @@ import java.util.ArrayList;
 
 import org.apache.log4j.Logger;
 
-import settings.IConstants;
+import settings.ISettings;
 
- public final class ProblemPrinter {
+public final class ProblemPrinter {
   private static final Logger logConsole = Logger.getLogger("console");
   private static final Logger mdLogfile = Logger.getLogger("file");
 
-  private static ArrayList<Long> getResultAndProcessingTime(LogicBase logic, Number... numbers) {
+  private static ArrayList<Long> getResultAndProcessingTime(LogicBase logic, String problemConstant, Number... numbers) {
     ArrayList<Long> results = new ArrayList<Long>();
     long start = System.nanoTime();
-    results.add(logic.getResult(numbers)); // the problems results is in results[0]
+      results.add(logic.getResult(problemConstant, numbers)); // the problems results is in results[0]      
     long end = System.nanoTime();
     results.add(end - start);
     return results;
@@ -25,15 +25,19 @@ import settings.IConstants;
   }
 
   public static void print(LogicBase logic, int problemNumber, Number... numbers) {
-    ArrayList<Long> results = getResultAndProcessingTime(logic, numbers);
+    print(logic, problemNumber, null, numbers);
+  }
+
+  public static void print(LogicBase logic, int problemNumber, String problemConstant, Number... numbers) {
+    ArrayList<Long> results = getResultAndProcessingTime(logic, problemConstant, numbers);
     StringBuilder problemResultString = new StringBuilder();
     problemResultString = problemResultString.append(results.get(0).toString());
-
-    while (problemResultString.length() < IConstants._PROBLEM_RESULT_STRING_LENGTH) {
+    while (problemResultString.length() < ISettings._PROBLEM_RESULT_STRING_LENGTH) {
       problemResultString.append(' ');
     }
 
     logConsole.info("Problem " + problemNumber + "\t" + problemResultString.toString() + " \t processing time (seconds): " + String.format("%.9f", adjustProcessingTime(results.get(1))));
     mdLogfile.info("| " + problemNumber + "|" + problemResultString.toString() + "|" + String.format("%.9f", adjustProcessingTime(results.get(1))) + "|");
   }
+
 }

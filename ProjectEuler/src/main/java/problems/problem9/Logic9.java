@@ -25,7 +25,7 @@ public class Logic9 extends LogicBase {
           steps++;
           if (getTripletSum(a, b, c) == sum && isPythagoreanTriplet(a, b, c)) {
             result = getTripletProduct(a, b, c);
-            logConsole.info(a + " * " + b + " * " +c + " = " + result  + " steps: " + steps);
+            logConsole.debug(a + " * " + b + " * " +c + " = " + result  + " steps: " + steps);
             break;
           }
         }

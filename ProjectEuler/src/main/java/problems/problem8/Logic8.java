@@ -35,8 +35,14 @@ import settings.IConstants;
 public class Logic8 extends LogicBase {
 
   private static final Logger logConsole = Logger.getLogger("console");
-  String numbersString = IConstants.PROBLEM_8_NUMBER_STRING;
+  String numbersString;
 
+  @Override
+  public long getResult(String numbersString, Number... numbers) {
+    this.numbersString = numbersString;
+    return getResult(numbers);
+  }
+  
   @Override
   public long getResult(Number... numbers) {
     long result = 0;
@@ -51,8 +57,7 @@ public class Logic8 extends LogicBase {
           logConsole.debug("new highest product: " + product);
           result = product;
         }
-      }
-      else{
+      } else {
         startIndex = startIndex + currentNumbers.indexOf(0);
       }
     }
@@ -60,12 +65,14 @@ public class Logic8 extends LogicBase {
     return result;
   }
 
+  
+
   private ArrayList<Integer> createCurrentNumbers(ArrayList<Integer> intArrayList, int startIndex, int intervallSize) {
     ArrayList<Integer> currentNumbers = new ArrayList<Integer>();
     for (int j = 0; j < intervallSize; j++) {
       currentNumbers.add(intArrayList.get(startIndex + j));
     }
-      logConsole.debug(currentNumbers);
+    logConsole.debug(currentNumbers);
     return currentNumbers;
   }
 
