@@ -6,7 +6,7 @@ import org.apache.log4j.Logger;
 
 import settings.IConstants;
 
-public abstract class ProblemBase {
+ public final class ProblemPrinter {
   private static final Logger logConsole = Logger.getLogger("console");
   private static final Logger mdLogfile = Logger.getLogger("file");
 
