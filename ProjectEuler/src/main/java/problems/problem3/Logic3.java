@@ -23,6 +23,13 @@ public class Logic3 extends LogicBase {
     return result;
   }
 
+  /**
+   * Calculates the prime-factors of a given number.
+   * 
+   * @param number
+   *          given number
+   * @return List of the the prime-factors
+   */
   public ArrayList<Integer> getPrimefactors(long number) {
     ArrayList<Integer> primefactors = new ArrayList<Integer>();
     for (int i = 2; i <= number; i++) {

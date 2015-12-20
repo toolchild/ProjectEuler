@@ -9,7 +9,7 @@ import problems.LogicBase;
 
 public class Logic4 extends LogicBase {
 
-  private static final Logger logConsole = Logger.getLogger("console");
+  private static final Logger CONSOLE = Logger.getLogger("console");
 
   @Override
   public long getResult(Number... numbers) {
@@ -47,7 +47,7 @@ public class Logic4 extends LogicBase {
     numberStringPart2 = new StringBuilder().append(numberStringPart2).reverse().toString();
     if (numberStringPart1.equals(numberStringPart2)) {
       result = true;
-      logConsole.debug(numberString + " -> " + numberStringPart1 + " = " + numberStringPart2);
+      CONSOLE.debug(numberString + " -> " + numberStringPart1 + " = " + numberStringPart2);
     }
     return result;
   }

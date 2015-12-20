@@ -1,8 +1,9 @@
 package problems.problem1;
 
+import problems.LogicBase;
+
 import java.util.ArrayList;
 
-import problems.LogicBase;
 
 // If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 // Find the sum of all the multiples of 3 or 5 below 1000.
@@ -24,19 +25,7 @@ public class Logic1 extends LogicBase {
     return result;
   }
 
-  /**
-   * Returns an ArrayList of Integer which are multiple of x and y
-   * 
-   * @param start
-   * @param end
-   * @param multipleOfX
-   *          x
-   * @param multipleOfY
-   *          y
-   * @return
-   */
-
-  private ArrayList<Integer> getNumbers(int start, int end, int multipleOfX, int multipleOfY) {
+  private ArrayList<Integer> getNumbers(final int start, final int end, final int multipleOfX, final int multipleOfY) {
     ArrayList<Integer> result = new ArrayList<Integer>();
     for (int number = start; number < end; number++) {
       if (isMultipleOfXAndY(multipleOfX, multipleOfY, number)) {

@@ -28,18 +28,18 @@ public class Logic5 extends LogicBase {
 
     int result = 1;
     ArrayList<Integer> divisors = getDivisors(start, end);
-    ArrayList<ArrayList<Integer>> primefactorsLists = getPrimefactorsLists(divisors);   
-    HashMap<Integer, Integer> uniquePrimesCounts = new HashMap<Integer, Integer>();   
+    ArrayList<ArrayList<Integer>> primefactorsLists = getPrimefactorsLists(divisors);
+    HashMap<Integer, Integer> uniquePrimesCounts = new HashMap<Integer, Integer>();
     for (ArrayList<Integer> primefactorList : primefactorsLists) {
       setUniquePrimesCounts(uniquePrimesCounts, primefactorList);
     }
-    
+
     for (Integer primeCountKey : uniquePrimesCounts.keySet()) {
       for (int i = 1; i <= uniquePrimesCounts.get(primeCountKey); i++) {
-        result = result * primeCountKey;        
+        result = result * primeCountKey;
       }
     }
-    
+
     logConsole.debug(uniquePrimesCounts.toString());
     return result;
   }
@@ -87,5 +87,5 @@ public class Logic5 extends LogicBase {
     }
     return primefactorsLists;
   }
-  
+
 }

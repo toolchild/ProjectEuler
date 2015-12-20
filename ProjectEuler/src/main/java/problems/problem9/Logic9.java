@@ -13,7 +13,7 @@ import problems.LogicBase;
 public class Logic9 extends LogicBase {
 
   private static final Logger logConsole = Logger.getLogger("console");
-  
+
   @Override
   public long getResult(Number... numbers) {
     int result = 0;
@@ -25,7 +25,7 @@ public class Logic9 extends LogicBase {
           steps++;
           if (getTripletSum(a, b, c) == sum && isPythagoreanTriplet(a, b, c)) {
             result = getTripletProduct(a, b, c);
-            logConsole.debug(a + " * " + b + " * " +c + " = " + result  + " steps: " + steps);
+            logConsole.debug(a + " * " + b + " * " + c + " = " + result + " steps: " + steps);
             break;
           }
         }

@@ -9,16 +9,14 @@ import problems.LogicBase;
 
 public class Logic7 extends LogicBase {
 
-  
-
   @Override
   public long getResult(Number... numbers) {
-    ArrayList<Integer> primes =  initPrimesArray();
+    ArrayList<Integer> primes = initPrimesArray();
     int result = getSpecificPrime(primes, numbers[0].intValue());
     return result;
   }
 
-  private int getSpecificPrime(ArrayList<Integer> primes, int index) { 
+  private int getSpecificPrime(ArrayList<Integer> primes, int index) {
     int number = 1;
     while (primes.size() < index) {
       number = number + 2;
@@ -31,12 +29,12 @@ public class Logic7 extends LogicBase {
   }
 
   private ArrayList<Integer> initPrimesArray() {
-      ArrayList<Integer> primes = new ArrayList<Integer>();   // list of primes to check with whether the number is a prime
-      primes.add(2);
-      return primes;
+    ArrayList<Integer> primes = new ArrayList<Integer>();   // list of primes to check with whether the number is a prime
+    primes.add(2);
+    return primes;
   }
 
-  private boolean isPrime( ArrayList<Integer> primes, int number) {
+  private boolean isPrime(ArrayList<Integer> primes, int number) {
     boolean isPrime = true;
     for (Integer prime : primes) {
       if (number % prime == 0) {
