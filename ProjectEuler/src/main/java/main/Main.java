@@ -4,12 +4,12 @@ import org.apache.log4j.Logger;
 
 import problems.LogicBase;
 import problems.ProblemPrinter;
-import problems.problem1.Logic1;
 import settings.IConstants;
 
 public class Main {
   // private static final Logger logConsole = Logger.getLogger("console");
   private static final Logger mdLogfile = Logger.getLogger("file");
+  public static final int UNUSED  = 0;
 
   public static void main(String[] args) {
 

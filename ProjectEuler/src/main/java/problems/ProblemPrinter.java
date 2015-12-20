@@ -19,7 +19,7 @@ public final class ProblemPrinter {
     return results;
   }
 
-  public static double adjustProcessingTime(long processingTime) {
+  private static double adjustProcessingTime(long processingTime) {
     Double adjustedProcessingTime = Long.valueOf(processingTime).doubleValue() / 1000000000;
     return adjustedProcessingTime;
   }

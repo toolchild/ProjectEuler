@@ -13,11 +13,11 @@ public abstract class LogicBase {
 
   public abstract long getResult(Number... numbers);
   
-  public long getResult(String stringConstant, Number... numbers){
+  public long getResult(String stringConstant, Number... numbers) {
     long result = 0;
-    if (stringConstant == null){
+    if (stringConstant == null) {
       result = getResult(numbers);
-    } else{
+    } else {
       logConsole.info("getResult(String, Numbers...) called but not implemented in Logic: " + this.getClass().getName());
     }
     return result;
@@ -28,13 +28,13 @@ public abstract class LogicBase {
     logConsole.debug(logicClassName);
     LogicBase logicObject = null;
     try {
-      Class<LogicBase> logicClass = (Class<LogicBase>) Class.forName(logicClassName);
-      Constructor<LogicBase> logicConstructor = logicClass.getConstructor(null);
-      logicObject = logicConstructor.newInstance();
+      Class<?> logicClass =  Class.forName(logicClassName);
+      Constructor<?> logicConstructor =  logicClass.getConstructor();
+      logicObject = (LogicBase) logicConstructor.newInstance();
     } catch (Exception e) {
       e.printStackTrace();
     }
     return logicObject;
   }
-  
+
 }
