@@ -9,20 +9,20 @@ import problems.LogicBase;
 
 public class Logic7 extends LogicBase {
 
-  private ArrayList<Integer> primes; // list of primes to check with whether the number is a prime
+  
 
   @Override
   public long getResult(Number... numbers) {
-    int result = getSpecificPrime(numbers[0].intValue());
+    ArrayList<Integer> primes =  initPrimesArray();
+    int result = getSpecificPrime(primes, numbers[0].intValue());
     return result;
   }
 
-  private int getSpecificPrime(int index) { 
-    initPrimesArray();
+  private int getSpecificPrime(ArrayList<Integer> primes, int index) { 
     int number = 1;
     while (primes.size() < index) {
       number = number + 2;
-      boolean isPrime = isPrime(number);
+      boolean isPrime = isPrime(primes, number);
       if (isPrime) {
         primes.add(number); // if a prime is found it is added to primes
       }
@@ -30,14 +30,13 @@ public class Logic7 extends LogicBase {
     return number;
   }
 
-  private void initPrimesArray() {
-    if (primes == null || primes.size() == 0) {
-      primes = new ArrayList<Integer>();
+  private ArrayList<Integer> initPrimesArray() {
+      ArrayList<Integer> primes = new ArrayList<Integer>();   // list of primes to check with whether the number is a prime
       primes.add(2);
-    }
+      return primes;
   }
 
-  private boolean isPrime(int number) {
+  private boolean isPrime( ArrayList<Integer> primes, int number) {
     boolean isPrime = true;
     for (Integer prime : primes) {
       if (number % prime == 0) {

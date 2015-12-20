@@ -35,11 +35,11 @@ import settings.IConstants;
 public class Logic8 extends LogicBase {
 
   private static final Logger logConsole = Logger.getLogger("console");
-  String numbersString;
+  private String problemConstant;
 
   @Override
   public long getResult(String numbersString, Number... numbers) {
-    this.numbersString = numbersString;
+    this.problemConstant = numbersString;
     return getResult(numbers);
   }
   
@@ -47,7 +47,7 @@ public class Logic8 extends LogicBase {
   public long getResult(Number... numbers) {
     long result = 0;
     int intervallSize = numbers[0].intValue();
-    ArrayList<Integer> intArrayList = createIntArrayList(numbersString);
+    ArrayList<Integer> intArrayList = createIntArrayList(problemConstant);
     for (int startIndex = 0; startIndex <= intArrayList.size() - intervallSize; startIndex++) {
       ArrayList<Integer> currentNumbers = createCurrentNumbers(intArrayList, startIndex, intervallSize);
       logConsole.debug("startIndex: " + startIndex);
